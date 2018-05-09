@@ -10,6 +10,7 @@ public class VoiceRec : MonoBehaviour
     // keyword array
     public string[] Keywords_array;
     public UnityEngine.Video.VideoPlayer player;
+    
 
     // Use this for initialization
     void Start()
@@ -33,6 +34,10 @@ public class VoiceRec : MonoBehaviour
         Debug.Log("Keyword: " + args.text + "; Confidence: " + args.confidence + "; Start Time: " + args.phraseStartTime + "; Duration: " + args.phraseDuration);
         // write your own logic
         if (args.text == "Just do it")
+        {
+            player.Play();
+        }
+        else if (args.text == "how are you")
         {
             player.Play();
         }
