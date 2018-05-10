@@ -10,6 +10,7 @@ public class VoiceRec : MonoBehaviour
     // keyword array
     public string[] Keywords_array;
     public UnityEngine.Video.VideoPlayer player;
+    public UnityEngine.Video.VideoClip[] videoClips; 
     
 
     // Use this for initialization
@@ -17,10 +18,10 @@ public class VoiceRec : MonoBehaviour
     {
         player = GetComponent<UnityEngine.Video.VideoPlayer>();
         // Change size of array for your requirement
-        Keywords_array = new string[2];
+        Keywords_array = new string[3];
         Keywords_array[0] = "hello";
-        Keywords_array[1] = "how are you";
-        Keywords_array[1] = "Just do it";
+        Keywords_array[1] = "go spiderman";
+        Keywords_array[2] = "Just do it";
 
         // instantiate keyword recognizer, pass keyword array in the constructor
         keywordRecognizer = new KeywordRecognizer(Keywords_array);
@@ -35,11 +36,13 @@ public class VoiceRec : MonoBehaviour
         // write your own logic
         if (args.text == "Just do it")
         {
+            player.clip = videoClips[0];
             player.Play();
         }
-        else if (args.text == "how are you")
+        else if (args.text == "go spiderman")
         {
-            player.Play();
+            player.clip = videoClips[1];
+            player.Play(); 
         }
     }
 }
