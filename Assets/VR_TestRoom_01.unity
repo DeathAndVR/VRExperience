@@ -159,6 +159,18 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11437430, guid: 84c8b8609f9bb434eaf5248f17ff1293, type: 2}
       propertyPath: StartWithControllers
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8254050, guid: 84c8b8609f9bb434eaf5248f17ff1293, type: 2}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8254050, guid: 84c8b8609f9bb434eaf5248f17ff1293, type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: e2382b36a42b5ca4a95f3fd3012d1716, type: 3}
+    - target: {fileID: 8254050, guid: 84c8b8609f9bb434eaf5248f17ff1293, type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -8952,6 +8964,37 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: acd3162995ff550418b285a7cbe1f289, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &524478987 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100002, guid: acd3162995ff550418b285a7cbe1f289, type: 3}
+  m_PrefabInternal: {fileID: 524478986}
+--- !u!65 &524478988
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 524478987}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 166.94757, y: 33.022636, z: 160.16185}
+  m_Center: {x: 1.1693238, y: -6.7130303, z: 5.289852}
+--- !u!54 &524478989
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 524478987}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &549615280
 Prefab:
   m_ObjectHideFlags: 0
@@ -11501,7 +11544,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -7.536
+      value: -8.097
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 2}
       propertyPath: m_LocalRotation.x
@@ -11541,7 +11584,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400010, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 2}
       propertyPath: SnapRotation
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -11633,7 +11676,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400012, guid: f4e380da85c94f74a8e5201090f2b39a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.0771
+      value: 11.12
       objectReference: {fileID: 0}
     - target: {fileID: 400012, guid: f4e380da85c94f74a8e5201090f2b39a, type: 3}
       propertyPath: m_LocalPosition.z
