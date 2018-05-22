@@ -4,7 +4,8 @@ Shader "Custom/KeyOut" {
 	Properties{
 		_MainTex("Base (RGB)", 2D) = "white" {}
 	_SecondaryTex("Secondary Texture", 2D) = "white" {}
-	_Threshold("Threshold", Range(0, 1)) = 0
+	_ThresholdRed("Threshold RED", Range(0, 1)) = 0
+	_ThresholdBlue("Threshold BLUE", Range(0, 1)) = 0
 	}
 		SubShader{
 		Pass{
@@ -34,13 +35,14 @@ Shader "Custom/KeyOut" {
 		return o;
 	}
 
-	float _Threshold;
+	float _ThresholdRed;
+	float _ThresholdBlue;
 
 	fixed4 frag(v2f i) : COLOR{
 		fixed4 col1 = tex2D(_MainTex, i.uv1);
 	fixed4 col2 = tex2D(_SecondaryTex, i.uv2);
-	fixed4 val = ceil(saturate(col1.g - col1.r - _Threshold)) * ceil(saturate(col1.g - col1.b - _Threshold));
-	if (val.g == 1)
+	float val = ceil(saturate(col1.g - col1.r - _ThresholdRed)) * ceil(saturate(col1.g - col1.b - _ThresholdBlue));
+	if (val == 1)
 	{
 		clip(-1.0);
 	}

@@ -28,4 +28,6 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _Threshold: 0.165
+    - _ThresholdBlue: 0.09
+    - _ThresholdRed: 0
     m_Colors: []
