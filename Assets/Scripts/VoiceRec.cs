@@ -19,9 +19,10 @@ public class VoiceRec : MonoBehaviour
         player = GetComponent<UnityEngine.Video.VideoPlayer>();
         // Change size of array for your requirement
         Keywords_array = new string[3];
-        Keywords_array[0] = "hello";
-        Keywords_array[1] = "go spiderman";
-        Keywords_array[2] = "Just do it";
+        
+        Keywords_array[0] = "go spiderman";
+        Keywords_array[1] = "Just do it";
+        Keywords_array[2] = "How did you get into Soccer";
 
         // instantiate keyword recognizer, pass keyword array in the constructor
         keywordRecognizer = new KeywordRecognizer(Keywords_array);
@@ -43,6 +44,11 @@ public class VoiceRec : MonoBehaviour
         {
             player.clip = videoClips[1];
             player.Play(); 
+        }
+        else if (args.text == "How did you get into soccer")
+        {
+            player.clip = videoClips[2];
+            player.Play();
         }
     }
 }
