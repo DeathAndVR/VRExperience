@@ -20752,8 +20752,8 @@ MonoBehaviour:
   videoClips:
   - {fileID: 32900000, guid: 5f22b698eeeb5f24ab086711d83c26ca, type: 3}
   - {fileID: 32900000, guid: 3905f18ef57a475429290c7fa0c79d1e, type: 3}
-  - {fileID: 32900000, guid: 757543f78206334438ad33e23ffb9224, type: 3}
-  - {fileID: 32900000, guid: f78851606286b2e44b3973b2a2185bef, type: 3}
+  - {fileID: 32900000, guid: cd35cbda0968fa640ac51b5bf19774f6, type: 3}
+  - {fileID: 32900000, guid: a27db559b63bd7e46a6bdcb0cab75c31, type: 3}
   - {fileID: 32900000, guid: 41e18fa958fa1f34d9c77daedea02cab, type: 3}
 --- !u!328 &1868416602
 VideoPlayer:
@@ -20762,7 +20762,7 @@ VideoPlayer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1868416600}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 1129c93b7f874624a8ded158c3592a4e, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 28d7e3040d2a94346b589c4528b37ec5, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -20776,7 +20776,7 @@ VideoPlayer:
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 1
   m_TargetAudioSources:
-  - {fileID: 1868416607}
+  - {fileID: 0}
   m_DirectAudioVolumes:
   - 1
   m_Url: 
