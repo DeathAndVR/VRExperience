@@ -3453,7 +3453,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh16630
+  m_Name: pb_Mesh13750
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -3755,6 +3755,105 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &446838120 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100008, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 2}
+  m_PrefabInternal: {fileID: 1209797481}
+--- !u!82 &446838126
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 446838120}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &447793912
 Prefab:
   m_ObjectHideFlags: 0
@@ -8765,7 +8864,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh16610
+  m_Name: pb_Mesh13730
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -9211,7 +9310,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh16840
+  m_Name: pb_Mesh13860
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -9422,7 +9521,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh16290
+  m_Name: pb_Mesh13950
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -9568,7 +9667,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh16788
+  m_Name: pb_Mesh13808
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -11189,7 +11288,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh-350748
+  m_Name: pb_Mesh13928
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -20653,7 +20752,9 @@ MonoBehaviour:
   videoClips:
   - {fileID: 32900000, guid: 5f22b698eeeb5f24ab086711d83c26ca, type: 3}
   - {fileID: 32900000, guid: 3905f18ef57a475429290c7fa0c79d1e, type: 3}
-  - {fileID: 32900000, guid: 2bfec28d3a0a3f24a9e2d01f7a5e78b4, type: 3}
+  - {fileID: 32900000, guid: 757543f78206334438ad33e23ffb9224, type: 3}
+  - {fileID: 32900000, guid: f78851606286b2e44b3973b2a2185bef, type: 3}
+  - {fileID: 32900000, guid: 41e18fa958fa1f34d9c77daedea02cab, type: 3}
 --- !u!328 &1868416602
 VideoPlayer:
   m_ObjectHideFlags: 0
@@ -20661,7 +20762,7 @@ VideoPlayer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1868416600}
   m_Enabled: 1
-  m_VideoClip: {fileID: 0}
+  m_VideoClip: {fileID: 32900000, guid: 1129c93b7f874624a8ded158c3592a4e, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -20674,15 +20775,17 @@ VideoPlayer:
   m_DataSource: 0
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 1
-  m_TargetAudioSources: []
-  m_DirectAudioVolumes: []
+  m_TargetAudioSources:
+  - {fileID: 1868416607}
+  m_DirectAudioVolumes:
+  - 1
   m_Url: 
-  m_EnabledAudioTracks: 
-  m_DirectAudioMutes: 
-  m_ControlledAudioTrackCount: 0
-  m_PlayOnAwake: 0
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 1
   m_SkipOnDrop: 1
-  m_Looping: 0
+  m_Looping: 1
   m_WaitForFirstFrame: 1
   m_FrameReadyEventEnabled: 0
 --- !u!23 &1868416603
@@ -20749,7 +20852,7 @@ Transform:
   m_GameObject: {fileID: 1868416600}
   m_LocalRotation: {x: -0.16994406, y: 0.6863811, z: -0.6863811, w: -0.16994406}
   m_LocalPosition: {x: 9.601, y: 11.535, z: -5.669}
-  m_LocalScale: {x: 0.21052803, y: 0.10871485, z: 0.16800357}
+  m_LocalScale: {x: 0.14387791, y: 0.0742973, z: 0.12768932}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 15
