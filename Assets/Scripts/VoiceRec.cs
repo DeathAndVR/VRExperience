@@ -10,13 +10,20 @@ public class VoiceRec : MonoBehaviour
     // keyword array
     public string[] Keywords_array;
     public UnityEngine.Video.VideoPlayer player;
-    public UnityEngine.Video.VideoClip[] videoClips; 
+    public UnityEngine.Video.VideoClip[] videoClips;
+    public UnityEngine.Video.VideoClip idleClip;
+    public GameObject IdlePlayer;
+    private UnityEngine.Video.VideoPlayer idleVideoPlayer;
+    private bool bIsIdle;
     
 
     // Use this for initialization
     void Start()
     {
+        bIsIdle = true;
         player = GetComponent<UnityEngine.Video.VideoPlayer>();
+        idleVideoPlayer = IdlePlayer.GetComponent<UnityEngine.Video.VideoPlayer>();
+
         // Change size of array for your requirement
         Keywords_array = new string[5];
         
@@ -31,6 +38,8 @@ public class VoiceRec : MonoBehaviour
         keywordRecognizer.OnPhraseRecognized += OnKeywordsRecognized;
         // start keyword recognizer
         keywordRecognizer.Start();
+        GetComponent<Renderer>().enabled = false;
+        IdlePlayer.GetComponent<Renderer>().enabled = true;
     }
 
     void OnKeywordsRecognized(PhraseRecognizedEventArgs args)
@@ -39,28 +48,60 @@ public class VoiceRec : MonoBehaviour
         // write your own logic
         if (args.text == "Just do it")
         {
-            player.clip = videoClips[0];
-            player.Play();
+            PlayClip(0);
         }
         else if (args.text == "go spiderman")
         {
-            player.clip = videoClips[1];
-            player.Play(); 
+            PlayClip(1);
         }
         else if (args.text == "How did you get into soccer")
         {
-            player.clip = videoClips[2];
-            player.Play();
+            PlayClip(2);
         }
         else if (args.text == "What was it liking growing up with sisters as a kid")
         {
-            player.clip = videoClips[3];
-            player.Play();
+            PlayClip(3);
         }
         else if (args.text == "What was your favorite thing about going to college in Florida")
         {
-            player.clip = videoClips[4];
-            player.Play();
+            PlayClip(4);
         }
+    }
+
+    void PlayClip(uint index)
+    {
+        player.clip = videoClips[index];
+        player.isLooping = false;
+
+        player.Play();
+        StartCoroutine(TurnOnRender());
+
+       
+    }
+
+    private void Update()
+    {
+        if(player.isPlaying == false && bIsIdle == false)
+        {
+            StartCoroutine(TurnOffRender());
+        }
+    }
+
+    IEnumerator TurnOnRender()
+    {
+        yield return new WaitForSeconds(0.4f);
+        idleVideoPlayer.Stop();
+        IdlePlayer.GetComponent<Renderer>().enabled = false;
+        GetComponent<Renderer>().enabled = true;
+        bIsIdle = false;
+    }
+    IEnumerator TurnOffRender()
+    {
+        bIsIdle = true;
+        idleVideoPlayer.Play();
+        yield return new WaitForSeconds(0.4f);
+        IdlePlayer.GetComponent<Renderer>().enabled = true;
+        GetComponent<Renderer>().enabled = false;
+       
     }
 }
