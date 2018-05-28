@@ -30,7 +30,7 @@ public class VoiceRec : MonoBehaviour
         Keywords_array[0] = "go spiderman";
         Keywords_array[1] = "Just do it";
         Keywords_array[2] = "How did you get into soccer";
-        Keywords_array[3] = "What was it liking growing up with sisters as a kid";
+        Keywords_array[3] = "What was it like growing up with sisters as a kid";
         Keywords_array[4] = "What was your favorite thing about going to college in Florida";
 
         // instantiate keyword recognizer, pass keyword array in the constructor
@@ -58,7 +58,7 @@ public class VoiceRec : MonoBehaviour
         {
             PlayClip(2);
         }
-        else if (args.text == "What was it liking growing up with sisters as a kid")
+        else if (args.text == "What was it like growing up with sisters as a kid")
         {
             PlayClip(3);
         }
