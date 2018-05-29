@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/John Goodman/Ethereal_Scene.unity
+- path: Assets/WhiteRoom_DD.unity
   isLoaded: 1
   isActive: 1
