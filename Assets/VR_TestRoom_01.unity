@@ -9705,6 +9705,16 @@ Prefab:
       propertyPath: m_Name
       value: VideoPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 114658358354618494, guid: 8319d13809810d341bd9096bb0aa22ab,
+        type: 2}
+      propertyPath: x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 114658358354618494, guid: 8319d13809810d341bd9096bb0aa22ab,
+        type: 2}
+      propertyPath: y
+      value: 180
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8319d13809810d341bd9096bb0aa22ab, type: 2}
   m_IsPrefabParent: 0
