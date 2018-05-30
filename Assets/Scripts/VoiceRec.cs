@@ -13,9 +13,10 @@ public class VoiceRec : MonoBehaviour
     public UnityEngine.Video.VideoClip[] videoClips;
     public UnityEngine.Video.VideoClip idleClip;
     public GameObject IdlePlayer;
+
     private UnityEngine.Video.VideoPlayer idleVideoPlayer;
     private bool bIsIdle;
-    private bool bStartedPlaying;
+    private bool bPreparedVideo;
 
     // TODO Get rid of this.
     public float x;
@@ -26,8 +27,9 @@ public class VoiceRec : MonoBehaviour
     void Start()
     {
         bIsIdle = true;
-        bStartedPlaying = false;
+        bPreparedVideo = false;
         player = GetComponent<UnityEngine.Video.VideoPlayer>();
+        player.Stop();
         idleVideoPlayer = IdlePlayer.GetComponent<UnityEngine.Video.VideoPlayer>();
 
         // Change size of array for your requirement
@@ -46,13 +48,13 @@ public class VoiceRec : MonoBehaviour
         keywordRecognizer.Start();
         GetComponent<Renderer>().enabled = false;
         IdlePlayer.GetComponent<Renderer>().enabled = true;
-        player.Stop();
+       
     }
 
     void OnKeywordsRecognized(PhraseRecognizedEventArgs args)
     {
         Debug.Log("Keyword: " + args.text + "; Confidence: " + args.confidence + "; Start Time: " + args.phraseStartTime + "; Duration: " + args.phraseDuration);
-        // write your own logic
+        //TODO Converstaion trees.
         if (args.text == "Just do it")
         {
             PlayClip(0);
@@ -77,55 +79,71 @@ public class VoiceRec : MonoBehaviour
 
     void PlayClip(uint index)
     {
+        // Play clip if we are not idle.
         if (bIsIdle == true)
         {
             player.clip = videoClips[index];
             player.isLooping = false;
             bIsIdle = false;
+            print("Playing Clip");
             player.Play();
-            StartCoroutine(TurnOnRender());
         }
-
-
     }
 
     private void Update()
     {
-        if (player.isPlaying)
-            bStartedPlaying = true;
-
-
-        if (player.isPlaying == false && bStartedPlaying == true && bIsIdle == false)
+        //For Debugging
+        /*
+        if (Input.GetKey(KeyCode.A))
         {
-            StartCoroutine(TurnOffRender());
+            print("init Clip");
+            PlayClip(2);
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            print("init Clip");
+            PlayClip(3);
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            print("init Clip");
+            PlayClip(4);
+        }
+        */
+
+        //Switch to clip after we have a frame ready.
+        if (player.frame > 2 && bIsIdle == false && bPreparedVideo == false)
+        {
+            print("Stoping idle"); 
+            idleVideoPlayer.Stop();
+            IdlePlayer.GetComponent<Renderer>().enabled = false;
+            GetComponent<Renderer>().enabled = true;
+            bPreparedVideo = true;
         }
 
+        if(player.isPlaying)
+        {
+            long frameCount = (long)player.frameCount;
+            // if we are close to ending the clip start switching to idle.
+            if(player.frame >= frameCount - 24 && bIsIdle == false)
+            {
+                print("Playing idle");
+                idleVideoPlayer.Play();
+                bIsIdle = true;
+            }
+            // Switch back and play idle.
+            if(bIsIdle == true && idleVideoPlayer.frame >= 2)
+            {
+                print("Switching back to idle");
+                IdlePlayer.GetComponent<Renderer>().enabled = true;
+                GetComponent<Renderer>().enabled = false;
+                player.Stop();
+                bPreparedVideo = false;
+            }
+            
+        }
 
-
-        this.transform.rotation = Quaternion.Euler(x, y, -Camera.main.transform.eulerAngles.z);
-
-
-
-
-    }
-
-    IEnumerator TurnOnRender()
-    {
-        yield return new WaitForSeconds(0.9f);
-        idleVideoPlayer.Stop();
-        IdlePlayer.GetComponent<Renderer>().enabled = false;
-        GetComponent<Renderer>().enabled = true;
-        bIsIdle = false;
-    }
-    IEnumerator TurnOffRender()
-    {
-        bIsIdle = true;
-        bStartedPlaying = false;
-        idleVideoPlayer.Play();
-        yield return new WaitForSeconds(0.9f);
-        IdlePlayer.GetComponent<Renderer>().enabled = true;
-        GetComponent<Renderer>().enabled = false;
-        player.Stop();
-
+        // Billboard towards camera.
+        this.transform.rotation = Quaternion.Euler(x, y, -Camera.main.transform.eulerAngles.y);
     }
 }

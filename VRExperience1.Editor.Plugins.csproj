@@ -386,6 +386,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Materials\KeyOut.shader" />
+    <None Include="Assets\Materials\PhoneRender.shader" />
     <None Include="Assets\OVR\Editor\AndroidManifest.OVRSubmission.xml" />
     <None Include="Assets\OVR\Resources\Cubemap Blit.shader" />
     <None Include="Assets\OVR\Resources\OVRMRCameraFrame.shader" />
