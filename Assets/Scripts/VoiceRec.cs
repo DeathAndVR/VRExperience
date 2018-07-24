@@ -114,7 +114,7 @@ public class VoiceRec : MonoBehaviour
         //Switch to clip after we have a frame ready.
         if (player.frame > 2 && bIsIdle == false && bPreparedVideo == false)
         {
-            print("Stoping idle"); 
+            print("Stopping idle"); 
             idleVideoPlayer.Stop();
             IdlePlayer.GetComponent<Renderer>().enabled = false;
             GetComponent<Renderer>().enabled = true;
