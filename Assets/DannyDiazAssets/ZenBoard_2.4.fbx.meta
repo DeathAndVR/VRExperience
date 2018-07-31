@@ -1,22 +1,40 @@
 fileFormatVersion: 2
-guid: 648cc85de2c25b241ad6e9eefe6beef7
+guid: aaf818fc8d6db65489176935588f0efb
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: polySurface2
-    100002: //RootNode
-    400000: polySurface2
-    400002: //RootNode
-    2100000: polySurface2Mat
-    2300000: polySurface2
-    3300000: polySurface2
-    4300000: polySurface2
+    100000: Base
+    100002: Camera
+    100004: Lamp
+    100006: //RootNode
+    400000: Base
+    400002: Camera
+    400004: Lamp
+    400006: //RootNode
+    2000000: Camera
+    2100000: BaseUV
+    2100002: Frame
+    2100004: FacePanel
+    2300000: Base
+    3300000: Base
+    4300000: Base
+    10800000: Lamp
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: polySurface2Mat
-    second: {fileID: 2100000, guid: 5635ec71029fa2e42a16cdeab3838e00, type: 2}
+      name: BaseUV
+    second: {fileID: 2100000, guid: 8a0d9abf51997bc4da28706ff0902f41, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FacePanel
+    second: {fileID: 2100000, guid: fe2a14b565edcda48acf425e8f39df90, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Frame
+    second: {fileID: 2100000, guid: aa3d794bc88148c40b1e848a2a899581, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
