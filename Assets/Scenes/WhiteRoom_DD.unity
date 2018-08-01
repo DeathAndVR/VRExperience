@@ -151,7 +151,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4726478150079220, guid: 07b9de94036699a4d89aca6339b11be0, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 07b9de94036699a4d89aca6339b11be0, type: 2}
@@ -210,7 +210,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: f8d07adaadbd84b448d6c731458513ac, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f8d07adaadbd84b448d6c731458513ac, type: 2}
@@ -252,7 +252,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010757787762, guid: e9e31f3327ea5f440a8d011634513c8b, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1000012478860392, guid: e9e31f3327ea5f440a8d011634513c8b, type: 2}
       propertyPath: m_Name
@@ -298,7 +298,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5cd2a5cb04c36cd4f8ee528273ab3680, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 5cd2a5cb04c36cd4f8ee528273ab3680, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -815,6 +815,11 @@ Prefab:
       propertyPath: m_Name
       value: Fog Particle Folder
       objectReference: {fileID: 0}
+    - target: {fileID: 198882390373482290, guid: fd512501041f82a49b0712c0d5ed6883,
+        type: 2}
+      propertyPath: InitialModule.startSize.scalar
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fd512501041f82a49b0712c0d5ed6883, type: 2}
   m_IsPrefabParent: 0
@@ -1011,7 +1016,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012272895456, guid: b34df5f5b84a56b46b64099db67fd0b6, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 114000012858033020, guid: b34df5f5b84a56b46b64099db67fd0b6,
         type: 2}
@@ -1058,7 +1063,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 996e2be922755874e966a801e1aeedef, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 996e2be922755874e966a801e1aeedef, type: 3}
@@ -1100,7 +1105,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4224910114871860, guid: 6b633765c63440341a0bc4a67bf156f4, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4224910114871860, guid: 6b633765c63440341a0bc4a67bf156f4, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -1133,7 +1138,7 @@ AudioListener:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 509316750}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!124 &509316752
 Behaviour:
   m_ObjectHideFlags: 0
@@ -1328,7 +1333,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &700695490
 GameObject:
@@ -1421,7 +1426,7 @@ Light:
   serializedVersion: 8
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1.51
+  m_Intensity: 2.38
   m_Range: 54.53
   m_SpotAngle: 172.4
   m_CookieSize: 10
@@ -1486,7 +1491,7 @@ Light:
   serializedVersion: 8
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.32
   m_Range: 54.53
   m_SpotAngle: 178.84
   m_CookieSize: 10
@@ -1562,7 +1567,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400012, guid: f4e380da85c94f74a8e5201090f2b39a, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 400012, guid: f4e380da85c94f74a8e5201090f2b39a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -1675,7 +1680,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4495712170650926, guid: 8319d13809810d341bd9096bb0aa22ab, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4495712170650926, guid: 8319d13809810d341bd9096bb0aa22ab, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -1818,7 +1823,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4366617601601892, guid: 8c82c30b97eb57c40b87fdc77c9a7443, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4366617601601892, guid: 8c82c30b97eb57c40b87fdc77c9a7443, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -2310,9 +2315,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: ecf57628d3bb0634c897791d70b64551, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.611
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2320,7 +2325,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 2.9197178
+  MinDistance: 7.9038305
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -2446,7 +2451,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 648cc85de2c25b241ad6e9eefe6beef7, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 648cc85de2c25b241ad6e9eefe6beef7, type: 3}
       propertyPath: m_LocalScale.x
@@ -2508,7 +2513,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4697568865090088, guid: b1fc6e09a5d92a74389ab4da2e807579, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1234554665735170, guid: b1fc6e09a5d92a74389ab4da2e807579, type: 2}
       propertyPath: m_Name
@@ -2523,6 +2528,11 @@ Prefab:
         type: 2}
       propertyPath: m_CullingMask.m_Bits
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 82537513848975790, guid: b1fc6e09a5d92a74389ab4da2e807579,
+        type: 2}
+      propertyPath: m_Volume
+      value: 0.681
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b1fc6e09a5d92a74389ab4da2e807579, type: 2}
